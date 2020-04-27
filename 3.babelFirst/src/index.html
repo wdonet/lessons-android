@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with Babel</title>
+  </head>
+  <body>
+
+    <h2>Follow these steps at project root:</h2>
+    <ol>
+      <li>npm init -y</li>
+      <li>npm i babel-cli@6 babel-preset-react-app@3</li>
+      <li>npx babel --watch src --out-dir dist --presets react-app/prod</li>
+      <li>open src/index.html</li>
+    </ol>
+
+    <!-- We will put our React component inside this div. -->
+    <div id="container"></div>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="../dist/like_button.js"></script>
+
+  </body>
+</html>
