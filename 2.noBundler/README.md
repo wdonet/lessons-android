@@ -1,4 +1,4 @@
-## Lesson 2 : React on static HTML
+## Lesson 2 : React with no bundle
 
 ### Steps
 1. Create a simple HTML page with [CDN links](https://reactjs.org/docs/cdn-links.html) and a `<div>` with id `root`
