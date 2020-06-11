@@ -1,7 +1,5 @@
 'use strict'
 
-const e = React.createElement;
-
 class LikeButton extends React.Component {
   state = {
     liked: false,
@@ -13,17 +11,19 @@ class LikeButton extends React.Component {
 
   render() {
     
-    const getButton = text => e('button', { onClick: () => this.toggleClick() }, text)
+    const TheButton = props => <button onClick={() => this.toggleClick()}>{props.children}</button>;
 
     if (this.state.liked) {
-      return e('h1', null, [
-        getButton('Unlike'), 
-        'Clicked!', 
-      ]);
+      return (
+        <h1>
+          <TheButton>Unlike</TheButton>
+          {' Clicked!'}
+        </h1>
+      );
     }
-    return getButton('Like');
+    return <TheButton>Like</TheButton>;
   }
 }
 
 const container = document.querySelector('#root');
-ReactDOM.render(e(LikeButton), container)
+ReactDOM.render(<LikeButton />, container)
