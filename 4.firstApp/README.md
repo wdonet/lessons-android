@@ -7,23 +7,25 @@ For building a first React App from scratch
 - `npm init -y`
 - Create folder
   - `public`
-    - `index.html` with target div and the bundle script import
+    - `index.html` with target div and **the script linking to the bundle**
     - here goes any other asset
   - `src`
-    - here goes thes components
+    - here goes the components
 - For GIT do `git init` and use `.gitignore` to exclude `node_modules` and `dist` folders
 
 ### Babel
-For making JS code transformations 
-- `npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react`
-  - `babel/preset-env` transform ES6+ into traditional JS
-  - `babel/preset-react` transform JSX
-- Create `.babelrc` like:
+For making JS code transformations
+1. `npm i --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react`
+2. Create `.babelrc` like:
 ```json
 {
   "presets": ["@babel/env", "@babel/preset-react"]
 }
 ```
+
+_A few words about the presets:_
+- `babel/preset-env` transforms ES6+ into traditional JS
+- `babel/preset-react` transforms JSX
 
 ### Webpack
 For using loaders, processing different files to bundle and prepare the dev server.
@@ -54,7 +56,7 @@ module.exports = {
   output: {  //  where to put our bundled code
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",  // where to serve files by the web-server
-    filename: "ozz-bundle.js"
+    filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
@@ -65,6 +67,7 @@ module.exports = {
   plugins: [new webpack.HotModuleReplacementPlugin()]
 };
 ```
+
 ### React
 - `npm i -S react react-dom`
 - Create `./src/index.js` like
@@ -102,7 +105,7 @@ export default App;
 ### `package.json`
 - Add to script `dev`: `webpack-dev-server --mode development`
 - `npm run dev`
-- Try http://localhost:3000/dist
+- Try http://localhost:3000/ (should load index.html content)
 
 ### Hot Module Reloading
 Tell what to replace using `react-hot-loader` as regular dependency. It safely do not run on production.
@@ -114,6 +117,6 @@ import {hot} from "react-hot-loader";
 // ...
 export default hot(module)(App);
 ```
-## Final Notes
+## Challenge
 Built files never show up in your `dist` directory. All files are served from memory directly.  For generating those do:
 - `webpack --mode development` - you can add it as `build` script at `package.json`
