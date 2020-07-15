@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Steps to Build
+## Requirements
 Follow 5.ticTacToeGame project first
 
 ## Steps for the React Router
