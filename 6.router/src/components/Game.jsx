@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { calculateWinner } from './components/utils';
-import Board from './components/Board';
-import Winner from './components/Winner';
+import { calculateWinner } from './utils';
+import Board from './Board';
+import Winner from './Winner';
 
 class Game extends React.Component {
   constructor(props) {
@@ -80,9 +78,4 @@ class Game extends React.Component {
   }
 }
 
-// ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
+export default Game;

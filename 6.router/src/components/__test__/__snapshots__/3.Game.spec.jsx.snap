@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Game> should render correctly 1`] = `
+<div
+  className="game"
+>
+  <div
+    className="game-board"
+  >
+    <mock-board-tag
+      onClick={[Function]}
+      squares={
+        Array [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ]
+      }
+    />
+  </div>
+  <div
+    className="game-info"
+  >
+    <div>
+      Next player: X
+    </div>
+    <mock-winner-tag
+      onReset={[Function]}
+      winner={null}
+    />
+    <ol />
+  </div>
+</div>
+`;
