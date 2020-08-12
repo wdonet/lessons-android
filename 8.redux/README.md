@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Installation
 1. `npx create-react-app 8.redux`
-2. Once you get into the folder: `npm i redux react-redux`
+2. Once you get into the folder: `npm i redux`
 3. `npm start`
 
 ### Actions Redux
