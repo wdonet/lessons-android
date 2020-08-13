@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Instructions for building your first Redux App
+## Instructions for building your first React Redux App
 
 ### Requirements
 Follow `8.redux` project
