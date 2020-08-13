@@ -4,17 +4,16 @@ import './index.css';
 import { actionCreators } from './js/actions';
 import store from './js/store';
 import Counter from './components/Counter';
-// import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const render =  () => ReactDOM.render(
   <React.StrictMode>
-      <Counter
-        value={store.getState().count}
-        onIncrement={() => store.dispatch(actionCreators.increment())}
-        onDecrement={() => store.dispatch(actionCreators.decrement())}
-        onReset={() => store.dispatch(actionCreators.reset())}
-      />
+    <Counter
+      value={store.getState().count}
+      onIncrement={() => store.dispatch(actionCreators.increment())}
+      onDecrement={() => store.dispatch(actionCreators.decrement())}
+      onReset={() => store.dispatch(actionCreators.reset())}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
